@@ -6,8 +6,12 @@ const connectDB = (url) => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then(() => console.log("Connected to DB!"))
-    .catch((error) => console.log(error));
+    .then(() => {
+      console.log(`Connected DB`);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 module.exports = connectDB;
